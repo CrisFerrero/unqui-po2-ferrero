@@ -23,7 +23,8 @@ class CounterTestCase {
 	
 		ArrayList<Integer> arraySencilloNaturales = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,9,1)); 
 		
-		//Ejercicio 1 (dado un array<int>, contadorDePares, impares y multiplos)
+		
+		//Ejercicio 1 (dado un array<int>, contadorDePares, impares y multiplos) ------------------------------
 		assertAll(
 				() -> assertEquals (7, counter.contadorDeParesDe(arrayDeNumerosEnteros)),
 				
@@ -34,7 +35,7 @@ class CounterTestCase {
 				() -> assertEquals (7, counter.contadorDeMultiplosDe(arrayDeNumerosEnteros, 3))
 				);
 		
-		//Ejercicio 2 (dado un array<int>, devuelve el que tenga mas cifras pares)
+		//Ejercicio 2 (dado un array<int>, devuelve el que tenga mas cifras pares) ----------------------------
 		assertAll(
 				() -> assertEquals(arraySencilloNaturales, counter.enteroALista(1234591)),
 				
@@ -42,13 +43,8 @@ class CounterTestCase {
 				() -> assertEquals(4, counter.contadorDeParesDelEntero(236847)),
 				
 				() -> assertEquals(24628, counter.elQueContieneMasParesDe(arrayDeNumerosEnterosV3))
-
-				/*
-				() -> assertEquals (3, counter.contadorDeParesDelEntero(1356870)),
-				() -> assertEquals (0, counter.contadorDeParesDelEntero(1395731)),
-				() -> assertEquals (3, counter.contadorDeParesDelEntero(-23986))
-				*/
 				
+		//Ejercicio 3
 				);
 	}
 

@@ -72,8 +72,28 @@ public class Counter {
 		return (valorConMasPares);
 	}
 	
+	//------------------------------------------------------------------
 	
-	// ---------------------------- SUBTESTS --------------------------
+	// ---------------------- EJERCICIO 3 ------------------------------
+	
+	/*
+	mcm entre(a,b){
+	if esMultiploDe(elMayorEntre(a,b), elMenorEntre(a,b){
+    	retornar(a)
+   		}
+	else retornar (a*b)
+	}
+	
+	mayorMultiploDe(x, y, unRango){
+	if mcm(x,y) > max(unRango){
+	    return(-1)
+	    }
+	else return(mcm(x,y) % max(unRango))
+	}
+	*/
+	
+	
+	// ---------------------------- SUBTESTS ---------------------------
 	public static void main(String[] args) {
         Counter counter = new Counter();
         System.out.println("La cantidad de numeros pares es " + counter.contadorDeParesDe(counter.arregloDeEnteros));
