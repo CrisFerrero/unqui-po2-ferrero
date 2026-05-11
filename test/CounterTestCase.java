@@ -12,10 +12,15 @@ class CounterTestCase {
 
 	@Test
 	void test() {
-		Counter c = new Counter();
-		ArrayList<Integer> listaDeNumerosTest = new ArrayList<Integer>(Arrays.asList(0,1,2,3,4,5));
+		Counter counter = new Counter();
+		
+		ArrayList<Integer> arrayDeNumerosTest = new ArrayList<Integer>(Arrays.asList(0,1,2,3,4,5,6));
 		assertAll(
-				() -> assertEquals (3, c.pairCounter(listaDeNumerosTest))
+				() -> assertEquals (4, counter.contadorDeParesDe(arrayDeNumerosTest)),
+				() -> assertEquals (3, counter.contadorDeImparesDe(arrayDeNumerosTest)),
+				() -> assertEquals (2, counter.contadorDeMultiplosDe(arrayDeNumerosTest, 5)),
+				() -> assertEquals (7, counter.contadorDeMultiplosDe(arrayDeNumerosTest, 1)),
+				() -> assertEquals (3, counter.contadorDeMultiplosDe(arrayDeNumerosTest, 3))
 				);
 	}
 
