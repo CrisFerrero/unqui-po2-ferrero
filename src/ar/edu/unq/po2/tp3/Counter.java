@@ -76,30 +76,42 @@ public class Counter {
 	
 	// ---------------------- EJERCICIO 3 ------------------------------
 	
-	/*
-	mcm entre(a,b){
-	if esMultiploDe(elMayorEntre(a,b), elMenorEntre(a,b){
-    	retornar(a)
-   		}
-	else retornar (a*b)
+	public int mcmEntre(int x, int y) {
+		int xAbs = Math.abs(x);		
+		int yAbs = Math.abs(y);
+		int mcmEntreXY = xAbs * yAbs; 
+		if (Math.max(xAbs, yAbs) % Math.min(xAbs, yAbs) == 0) {
+			mcmEntreXY = Math.max(xAbs, yAbs);
+		}
+		return (mcmEntreXY);
 	}
 	
-	mayorMultiploDe(x, y, unRango){
-	if mcm(x,y) > max(unRango){
-	    return(-1)
-	    }
-	else return(mcm(x,y) % max(unRango))
+	public int mayorMCM(int valor1, int valor2, int maximoValor) {
+		int valorARetornar = maximoValor / mcmEntre(valor1, valor2) * mcmEntre(valor1, valor2);
+		if (mcmEntre(valor1, valor2) > maximoValor) {
+			valorARetornar = -1;
+		}
+		return(valorARetornar);
 	}
-	*/
 	
+	// --------------------- EJERCICIO 4 -------------------------------
 	
 	// ---------------------------- SUBTESTS ---------------------------
 	public static void main(String[] args) {
         Counter counter = new Counter();
+        /*
         System.out.println("La cantidad de numeros pares es " + counter.contadorDeParesDe(counter.arregloDeEnteros));
         System.out.println("La cantidad de numeros impares es " + counter.contadorDeImparesDe(counter.arregloDeEnteros));
         System.out.println("La cantidad de multiplos del valor dado es " + counter.contadorDeMultiplosDe(counter.arregloDeEnteros, 3));
+        //-----------------------------
         System.out.println("El numero dado como lista es " + counter.enteroALista(20563));
+        //-----------------------------
+        System.out.println("El mcm entre los valores dados es " + counter.mcmEntre(3, 9));
+        System.out.println("El mcm entre los valores dados es " + counter.mcmEntre(3, -10));
+        System.out.println("El mayor mcm entre los valores dados es " + counter.mayorMCM(3, -10, 1000));
+        System.out.println("El mayor mcm entre los valores dados es " + counter.mayorMCM(334, 3 , 1000));
+        */
+        //-----------------------------
         
 	}
 }

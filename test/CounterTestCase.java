@@ -43,9 +43,25 @@ class CounterTestCase {
 				() -> assertEquals(4, counter.contadorDeParesDelEntero(236847)),
 				
 				() -> assertEquals(24628, counter.elQueContieneMasParesDe(arrayDeNumerosEnterosV3))
-				
-		//Ejercicio 3
 				);
+				
+		//Ejercicio 3 (maximo mcm posible en cierto rango) ----------------------------------------------------
+		assertAll(
+				() -> assertEquals(15, counter.mcmEntre(3, 5)),
+				() -> assertEquals(9, counter.mcmEntre(9,  3)),
+				() -> assertEquals(42, counter.mcmEntre(7, 6)),
+				
+				() -> assertEquals(-1, counter.mayorMCM(3, 500, 1000)),
+				() -> assertEquals(1000, counter.mayorMCM(125, 8, 1000)),
+				() -> assertEquals(999, counter.mayorMCM(111, 9, 1000)),
+				() -> assertEquals(1500, counter.mayorMCM(500, 3, 1500))
+				);
+		/*
+		 assertAll(
+				() -> assertEquals()
+				);
+		*/
+		
 	}
 
 }
