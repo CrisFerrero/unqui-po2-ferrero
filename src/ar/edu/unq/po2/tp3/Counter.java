@@ -94,26 +94,92 @@ public class Counter {
 		return(valorARetornar);
 	}
 	
+	
 	// --------------------- EJERCICIO 4 -------------------------------
 	
+		String a = "abc";
+		
+		String s = a;
+		
+		String t;
+		
+		// Los tests que se piden están a lo último en la sección SUBTESTS (ejercicio 4)
+		
+	// -----------------------------------------------------------------
+		
+	// ------------------- EJERCICIO 5 ---------------------------------
+		
+	/*
+	  Q: Que es un dato primitivo según java?
+	  A: Es un dato que ya viene predefinido en el lenguaje, que tienen reservada
+	  una "keyword".
+	  
+	  Q: Diferencia entre datos de tipo "int" e "Integer"
+	  A: Sinceramente no entendí muy bien la diferencia según el documento.
+	     Se que uno es primitivo (int) mientras que Integer no lo es. Por lo que
+	     la principal diferencia que habría entre ellos es que Integer al ser una
+	     clase y no un tipo primitivo, contiene un protocolo que le permite realizar
+	     determinadas acciones a diferencia de int.
+	     
+	  Q: Cual sería el valor predeterminado al definir una variable de instancia del tipo int? y de Integer? testear.
+	  A: La teoría que tengo es no se debería poder definir una variable de instancia de int, ya que no es una clase. 
+	     De Integer, si es que pudiesemos definir una variable de instancia imagino que tendría el valor del tipo
+	     que definamos. La verdad que preferiría no testearlo, por miedo a que no pueda hacer rollback (aunque no creo que se pueda).
+	*/
+
+		
 	// ---------------------------- SUBTESTS ---------------------------
-	public static void main(String[] args) {
-        Counter counter = new Counter();
-        /*
-        System.out.println("La cantidad de numeros pares es " + counter.contadorDeParesDe(counter.arregloDeEnteros));
-        System.out.println("La cantidad de numeros impares es " + counter.contadorDeImparesDe(counter.arregloDeEnteros));
-        System.out.println("La cantidad de multiplos del valor dado es " + counter.contadorDeMultiplosDe(counter.arregloDeEnteros, 3));
-        //-----------------------------
-        System.out.println("El numero dado como lista es " + counter.enteroALista(20563));
-        //-----------------------------
-        System.out.println("El mcm entre los valores dados es " + counter.mcmEntre(3, 9));
-        System.out.println("El mcm entre los valores dados es " + counter.mcmEntre(3, -10));
-        System.out.println("El mayor mcm entre los valores dados es " + counter.mayorMCM(3, -10, 1000));
-        System.out.println("El mayor mcm entre los valores dados es " + counter.mayorMCM(334, 3 , 1000));
-        */
-        //-----------------------------
-        
+		public static void main(String[] args) {
+	        Counter counter = new Counter();
+	        /*
+	        System.out.println("La cantidad de numeros pares es " + counter.contadorDeParesDe(counter.arregloDeEnteros));
+	        System.out.println("La cantidad de numeros impares es " + counter.contadorDeImparesDe(counter.arregloDeEnteros));
+	        System.out.println("La cantidad de multiplos del valor dado es " + counter.contadorDeMultiplosDe(counter.arregloDeEnteros, 3));
+	        //-----------------------------
+	        System.out.println("El numero dado como lista es " + counter.enteroALista(20563));
+	        //-----------------------------
+	        System.out.println("El mcm entre los valores dados es " + counter.mcmEntre(3, 9));
+	        System.out.println("El mcm entre los valores dados es " + counter.mcmEntre(3, -10));
+	        System.out.println("El mayor mcm entre los valores dados es " + counter.mayorMCM(3, -10, 1000));
+	        System.out.println("El mayor mcm entre los valores dados es " + counter.mayorMCM(334, 3 , 1000));
+	        
+	        //-----------------------------
+	        
+	        // ---------- EJERCICIO 4 (con errores intencionados) ----------
+	        // No estoy seguro de si esta era la forma en la que esperaban que lo veamos.
+	        
+	        System.out.println(counter.s.length());
+	        // 3
+	        
+	        //System.out.println(counter.t.length());
+	        // error "Cannot invoke "String.length()" because "counter.t" is null at..."
+	        
+	        System.out.println(1 + counter.a);
+	        // 1abc
+	        
+	        System.out.println(counter.a.toUpperCase());
+	        // ABC
+	        
+	        System.out.println("Libertad".lastIndexOf('i'));
+	        // 1
+	        
+	        System.out.println("Universidad".lastIndexOf('i'));
+	        // 7
+	        
+	        System.out.println("Quilmes".substring(2,4));
+	        // il
+	        
+	        System.out.println((counter.a.length() + counter.a).startsWith("a"));
+	        // false
+	        
+	        System.out.println(counter.s == counter.a);
+	        // true
+	        
+	        System.out.println(counter.a.substring(1,3).equals("bc"));
+	        // true
+
+	        */
+		}
 	}
-}
 
 

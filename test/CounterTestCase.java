@@ -56,11 +56,6 @@ class CounterTestCase {
 				() -> assertEquals(999, counter.mayorMCM(111, 9, 1000)),
 				() -> assertEquals(1500, counter.mayorMCM(500, 3, 1500))
 				);
-		/*
-		 assertAll(
-				() -> assertEquals()
-				);
-		*/
 		
 	}
 
